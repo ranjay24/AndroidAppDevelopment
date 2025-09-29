@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CheckBox</string>
+
+    <string-array name="countries">
+        <item>India</item>
+        <item>England</item>
+        <item>US</item>
+        <item>Veitnam</item>
+    </string-array>
+</resources>
