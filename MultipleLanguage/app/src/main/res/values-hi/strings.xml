@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MultipleLanguage</string>
+    <string name="hello">हैलो वर्ल्ड</string>
+    <string name="show_toast">एक टोस्ट संदेश</string>
+    <string name="toast">एक टोस्ट संदेश है</string>
+</resources>
