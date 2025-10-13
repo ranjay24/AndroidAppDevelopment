@@ -70,4 +70,24 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
         Toast.makeText(applicationContext,"App Data Saved" , Toast.LENGTH_SHORT).show()
     }
+
+    fun retreiveData(){
+        sharedPreferences = this.getSharedPreferences("saveData", Context.MODE_PRIVATE)
+        name = sharedPreferences.getString("key name",null)
+        message = sharedPreferences.getString("key message",null)
+        count = sharedPreferences.getInt("key count",0)
+        isChecked = sharedPreferences.getBoolean("key boolean",false)
+
+        userName.setText(name)
+        userMessage.setText(message)
+        counter.setText(""+count)
+        remember.isChecked = isChecked!!
+    }
+
+    override fun onResume() {
+        super.onResume()
+        retreiveData()
+    }
+
+
 }
