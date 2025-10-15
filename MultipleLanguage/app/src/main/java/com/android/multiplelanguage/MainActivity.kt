@@ -1,5 +1,6 @@
 package com.android.multiplelanguage
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -17,10 +18,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    //Radio Button Learning Implmentation
+    //Checked button Learning Implmentation
     lateinit var display : TextView
     lateinit var learning : CheckBox
     lateinit var learned : CheckBox
+
+    //Radio Button Learning with intent
+    lateinit var openGame : Button
 
 
 
@@ -38,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //Radio Button Learning Implmentation
+        //Checked button Learning Implmentation
         display = findViewById(R.id.display)
         learning = findViewById(R.id.learningChecked)
         learned = findViewById(R.id.learnedChecked)
@@ -64,7 +68,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+
+    openGame = findViewById(R.id.openGame)
+    openGame.setOnClickListener { view ->
+        var intent = Intent(this@MainActivity, GamesActivity::class.java)
+        startActivity(intent)
+
+    }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.fullView)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
