@@ -1,9 +1,11 @@
 package com.android.spinners
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -14,6 +16,10 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     private lateinit var spinner : Spinner
+
+
+    //checkbox with intent
+    lateinit var openFruitOrder : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +49,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+        //checkbox with intent
+        openFruitOrder = findViewById(R.id.openNew)
+        openFruitOrder.setOnClickListener { view ->
+            var intent = Intent(this@MainActivity , FruitOrderActivity::class.java)
+            startActivity(intent)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
