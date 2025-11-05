@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary App Colors -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+
+    <!-- Background Shades -->
+    <color name="gray_light">#E2E2E2</color>
+    <color name="gray_medium">#BDBDBD</color>
+    <color name="gray_dark">#757575</color>
+
+    <!-- Accent Colors -->
+    <color name="blue_accent">#969EEE</color>
+    <color name="text_primary">#465A61</color>
+</resources>
