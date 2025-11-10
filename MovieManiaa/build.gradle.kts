@@ -1,0 +1,12 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file for MovieManiaa
+
+plugins {
+    id("com.android.application") apply false
+    id("org.jetbrains.kotlin.android") apply false
+}
+
+
+task<Delete>("clean") {
+    delete(rootProject.buildDir)
+}

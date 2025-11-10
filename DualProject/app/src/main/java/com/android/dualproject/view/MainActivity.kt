@@ -10,6 +10,7 @@ import com.android.dualproject.R
 import com.android.dualproject.databinding.ActivityMainBinding
 import com.android.dualproject.view.PortfolioActivity
 import com.android.dualproject.view.MovieActivity
+import com.android.dualproject.
 
 class MainActivity : AppCompatActivity() {
 
